@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+}
+
+#app {
+  margin: 0 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: $web3sg-text;
+  background: black;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 19px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  line-height: 24px;
+  font-size: 34px;
+  letter-spacing: 0.07em;
+  font-family: 'Turret Road';
+  color: white;
+  text-shadow: 0px 0px 3px white;
+  font-weight: 800;
+}
+
+div.text {
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}

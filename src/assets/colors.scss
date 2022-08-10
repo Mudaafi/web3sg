@@ -1,0 +1,21 @@
+// Colors
+$web3sg-grey-dark: #6c7073;
+$web3sg-grey-light: #c0c3c8;
+
+$web3sg-purple-light: #d5d5ff;
+$web3sg-purple-dark: #899bdc;
+$web3sg-red-light: #ce919e;
+
+// Text
+$web3sg-text: $web3sg-purple-light;
+$web3sg-citadel-text: $web3sg-red-light;
+$web3sg-deadlands-text: $web3sg-purple-dark;
+
+// Background
+$web3sg-bg: linear-gradient(180deg, #000000 11.71%, #15262e 103.19%);
+$web3sg-gradient-main: linear-gradient(
+  90deg,
+  #cc939f 0%,
+  rgba(255, 255, 255, 0.93) 50.83%,
+  #939dc1 100%
+);
