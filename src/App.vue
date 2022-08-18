@@ -10,8 +10,9 @@ import SectionCollaborations from './components/SectionCollaborations.vue'
 import SectionRoadmap from './components/SectionRoadmap.vue'
 import SectionMembersAccess from './components/SectionMembersAccess.vue'
 
-type SECTIONS = 'genesis' | 'about' | 'collab' | 'roadmap'
+type SECTIONS = 'top' | 'genesis' | 'about' | 'collab' | 'roadmap'
 
+const sectionLanding = ref<InstanceType<typeof SectionLanding> | null>(null)
 const sectionGenesis = ref<InstanceType<typeof SectionPass> | null>(null)
 const sectionAbout = ref<InstanceType<typeof SectionAbout> | null>(null)
 const sectionCollab = ref<InstanceType<typeof SectionCollaborations> | null>(
@@ -22,6 +23,9 @@ const sectionRoadmap = ref<InstanceType<typeof SectionRoadmap> | null>(null)
 function scrollToSection(sectionRef: SECTIONS) {
   let section = null
   switch (sectionRef) {
+    case 'top':
+      section = sectionLanding
+      break
     case 'genesis':
       section = sectionGenesis
       break
@@ -48,6 +52,7 @@ function scrollToSection(sectionRef: SECTIONS) {
 <template>
   <HeaderMain
     class="header-main"
+    @navTop="scrollToSection('top')"
     @navGenesis="scrollToSection('genesis')"
     @navAbout="scrollToSection('about')"
     @navCollab="scrollToSection('collab')"
@@ -55,7 +60,11 @@ function scrollToSection(sectionRef: SECTIONS) {
   />
 
   <main>
-    <SectionLanding class="section" @navGenesis="scrollToSection('genesis')" />
+    <SectionLanding
+      class="section"
+      @navGenesis="scrollToSection('genesis')"
+      ref="sectionLanding"
+    />
     <SectionPass class="section" ref="sectionGenesis" />
     <SectionAbout class="section" ref="sectionAbout" />
     <SectionCollaborations class="section" ref="sectionCollab" />
@@ -100,5 +109,30 @@ h1 {
   position: absolute;
   top: 0;
   z-index: -5;
+}
+
+// -- Mobile Styles
+@media (max-width: $web3sg-tablet-limit) {
+  .header-main {
+    position: sticky;
+    top: 0;
+  }
+  .bg {
+    margin-top: 40px;
+  }
+  .section {
+    margin-bottom: 60px;
+    &:not(:last-child) {
+      padding-top: 110px;
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  .section {
+    &:not(:last-child) {
+      padding-top: 40px;
+    }
+  }
 }
 </style>

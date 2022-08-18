@@ -91,4 +91,47 @@ section {
     }
   }
 }
+
+@media (max-width: $web3sg-tablet-limit) {
+  section {
+    flex-direction: column;
+    row-gap: 50px;
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+    .col {
+      width: 75vw;
+      &.col-pass {
+        width: 45vw;
+      }
+      .btn {
+        margin-top: 20px;
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  section {
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+    .col {
+      width: 75vw;
+      &.col-pass {
+        width: 65vw;
+      }
+      h2 {
+        margin-bottom: 14px;
+      }
+      .btn {
+        margin-top: 20px;
+        align-self: center;
+      }
+    }
+  }
+}
 </style>

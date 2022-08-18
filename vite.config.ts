@@ -16,6 +16,8 @@ export default defineConfig({
       scss: {
         additionalData: `
           @import "./src/assets/colors.scss";
+          @import "./src/assets/others.scss";
+
         `,
       },
     },

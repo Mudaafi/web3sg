@@ -176,4 +176,29 @@ section {
     }
   }
 }
+
+@media (max-width: $web3sg-tablet-limit) {
+  section {
+    .column {
+      width: 80vw;
+    }
+    h2 {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  section {
+    h2 {
+      margin-bottom: 18px;
+    }
+    .text {
+      margin-bottom: 40px;
+    }
+    .variants {
+      grid-template-columns: 1fr;
+    }
+  }
+}
 </style>

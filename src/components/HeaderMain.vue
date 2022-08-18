@@ -5,9 +5,13 @@ import BtnMemberAccess from './BtnMemberAccess.vue'
 </script>
 
 <template>
-  <header>
+  <header class="main">
     <div class="segment left">
-      <img class="main-logo icon" src="@/assets/main-logo.png" />
+      <img
+        class="main-logo icon"
+        src="@/assets/main-logo.png"
+        @click="$emit('navTop')"
+      />
       <a href="https://discord.com/invite/web3sg" class="icon" target="_blank">
         <IconDiscord class="icon" />
       </a>
@@ -26,7 +30,7 @@ import BtnMemberAccess from './BtnMemberAccess.vue'
       <div class="nav-btn" @click="$emit('navRoadmap')">Roadmap</div>
     </div>
     <div class="segment right">
-      <BtnMemberAccess />
+      <BtnMemberAccess class="btn" />
     </div>
   </header>
 </template>
@@ -86,6 +90,33 @@ header {
   &.right {
     flex-grow: 1;
     justify-content: end;
+  }
+}
+
+@media (max-width: $web3sg-tablet-limit) {
+  header {
+    font-size: 12px;
+    padding: 6px 10px 6px 12px;
+    .btn {
+      padding: 6px 14px;
+    }
+    .segment {
+      column-gap: 4px;
+      &.center {
+        column-gap: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  header {
+    font-size: 12px;
+    padding: 6px 10px 6px 12px;
+    .left :not(.main-logo),
+    .center {
+      display: none;
+    }
   }
 }
 </style>

@@ -66,4 +66,44 @@ section {
     }
   }
 }
+
+@media (max-width: $web3sg-tablet-limit) {
+  section {
+    padding: 0;
+    .hero {
+      padding: 60px 50px;
+      grid-template-columns: 0.5fr 3fr 1.5fr;
+      .column:last-child {
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  section .hero {
+    padding: 40px 25px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    justify-content: center;
+    text-align: center;
+    .column {
+      &.column-pass {
+        align-items: center;
+        margin-right: 0px;
+      }
+      &.column-text {
+        justify-content: space-between;
+        h2 {
+          font-size: 22px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
 </style>

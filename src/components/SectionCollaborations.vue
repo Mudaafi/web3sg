@@ -133,6 +133,7 @@ section {
       flex-direction: column;
       align-items: center;
       margin-bottom: 48px;
+      width: 200px;
       img {
         width: 150px;
         margin-bottom: 18px;
@@ -148,6 +149,29 @@ section {
         text-fill-color: transparent;
         text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
         letter-spacing: 0.02em;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (max-width: $web3sg-tablet-limit) {
+  section {
+    h1 {
+      &.reflected {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  section {
+    h1 {
+      font-size: 24px;
+      line-height: 24px;
+
+      &.reflected {
+        margin-bottom: 50px;
       }
     }
   }

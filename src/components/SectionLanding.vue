@@ -66,4 +66,39 @@ section {
     }
   }
 }
+// -- Mobile Styles
+@media (max-width: $web3sg-tablet-limit) {
+  section {
+    height: auto;
+    justify-content: flex-start;
+    div.subtext {
+      width: 90vw;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 400;
+      margin-bottom: 32px;
+    }
+    h1 {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  section {
+    div.subtext {
+      width: 90vw;
+      font-size: 11px;
+      line-height: 18px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    .btn {
+      font-size: 12px;
+      .btn-text {
+        padding: 6px 18px;
+      }
+    }
+  }
+}
 </style>

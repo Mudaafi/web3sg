@@ -58,4 +58,34 @@ section {
     }
   }
 }
+
+@media (max-width: $web3sg-tablet-limit) {
+  section {
+    justify-content: center;
+    padding: 0;
+    .col {
+      width: 90vw;
+    }
+    .col:is(:last-child) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $web3sg-mobile-limit) {
+  section {
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    .col {
+      width: 90vw;
+      &.overlay {
+        h2 {
+          margin-bottom: 12px;
+        }
+        padding: 31px 30px 25px;
+      }
+    }
+  }
+}
 </style>
